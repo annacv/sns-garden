@@ -1,11 +1,17 @@
 <template>
-  <div class="LayoutDefault">
-    <nav id="nav" class="LayoutDefault__nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <main class="LayoutDefault__main">
+  <v-app class="layout-hello">
+    <main class="layout-hello__main">
       <slot/>
     </main>
-  </div>
+  </v-app>
 </template>
+
+<script>
+export default {
+  name: 'LayoutDefault',
+
+  data: () => ({
+    //
+  })
+}
+</script>

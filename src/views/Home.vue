@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <img alt="SonoSuite logo" src="../assets/logo.png" class="app__brand">
     <HelloWorld :msg="$t('hello')"/>
-    <h2>{{ $t('hello') }}</h2>
   </div>
 </template>
 
