@@ -1,3 +1,44 @@
 {
+  "form": {
+    "input": {
+      "email":  "Email",
+      "password": "Password",
+      "repeat_password": "Retype Password",
+      "first_name": "First Name",
+      "last_name": "Last Name"
+    },
+    "validations": {
+      "errors": {
+        "email_required" : "Email is required",
+        "email_valid": "Email must be valid",
+        "password_required": "Password is required",
+        "password_min_length": "Password must be at least 5 characters",
+        "password_max_length": "Password must be less than 10 characters",
+        "confirm_password": "Confirm password",
+        "password_not_match": "Passwords must match",
+        "only_letters": "This field can contain only letters"
+      }
+    }
+  },
+
+  "register": {
+    "title": "Sign Up",
+    "subtitle": "Create your free account now. No credit card required.",
+    "have_account": "Already have an account?",
+    "link_to": "Sign In",
+    "link_to_url": "/login",
+    "sign_up_for": "for email:"
+  },
+
+  "user_actions": {
+    "next_step": "Next Step",
+    "previous_step": "Go Back",
+    "register": "Register",
+    "register_with": "Sign Up with",
+    "login": "Log in",
+    "login_with": "Log In with",
+    "verify_email": "Resend Verification Email"
+  },
+
   "hello": "helloooo"
 }
