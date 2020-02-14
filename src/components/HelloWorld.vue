@@ -20,7 +20,7 @@
         class="mb-5"
         cols="12"
       >
-        <v-btn to='/about' class="primary">GO!</v-btn>
+        <v-btn to='/garden' class="primary">GO!</v-btn>
       </v-col>
     </v-row>
   </v-container>

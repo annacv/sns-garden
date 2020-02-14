@@ -15,14 +15,22 @@
       <v-spacer></v-spacer>
       <nav id="nav" class="layout-default__nav">
         <router-link to="/" class="mr-2">Home</router-link> |
-        <router-link to="/about" class="ml-2">Garden</router-link>
+        <router-link to="/garden" class="ml-2">Garden</router-link>
       </nav>
     </v-app-bar>
     <main class="layout-default__main">
-      <slot/>
+      <v-row no-gutters>
+        <v-col cols="12">
+          <slot/>
+        </v-col>
+      </v-row>
     </main>
     <footer class="layout-default__footer">
-      &copy; Awesome Company
+      <v-row no-gutters>
+        <v-col cols="12">
+          &copy; Awesome Company
+        </v-col>
+      </v-row>
     </footer>
   </v-app>
 </template>
