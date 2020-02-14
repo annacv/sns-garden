@@ -1,12 +1,9 @@
 .layout-default {
   &__main {
-    padding: 3rem;
-    height: 85vh;
+    height: 100%;
   }
 
   &__nav {
-    padding: 3rem;
-
     .router-link-exact-active {
       color: #ee028b;
     }
