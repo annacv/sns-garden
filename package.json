@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
     "core-js": "^3.6.4",
     "node-sass": "^4.13.1",
     "sass-lint": "^1.13.1",
