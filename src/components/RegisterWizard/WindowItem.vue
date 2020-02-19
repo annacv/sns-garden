@@ -1,5 +1,5 @@
 <template>
-  <v-window-item :value="value">
+  <v-window-item :value="value" :user="user">
     <v-row no-gutters>
       <template v-for="(outsideCol, index) in outsideCols">
         <v-col
@@ -51,9 +51,11 @@
                   >
                     {{ insideCol.link_to_text }}
                   </router-link>
+                  <span :class="insideCol.userStyle" v-if="insideCol.user === true">
+                    {{ user }}
+                  </span>
                 </p>
                 <v-form
-                  v-if="insideCol.form_field"
                   v-model="valid"
                   class="pa-0 ma-0"
                 >
@@ -62,25 +64,37 @@
                     :element="item"
                     :key="position"
                   />
+                  <VTabs v-if="insideCol.hasTabs === true"/>
+                  <Checkbox
+                    v-for="(item, position) in insideCol.form_checkbox"
+                    :key="position"
+                    :element="item"
+                  />
                   <VButton
+                    v-for="button in insideCol.stepButtons"
+                    :key="button.text"
                     className="mt-3 mb-3"
+                    :type="button.type"
                     :block=true
-                    :disabled="!valid"
-                    :buttonText="insideCol.button"
-                    @click="stepForward"
+                    :disabled="button.hasOwnProperty('disabled') ? button.disabled : !valid"
+                    :buttonText="button.text"
+                    :color="button.color"
+                    :outlined="button.outlined"
+                    @click="setActions"
                   />
                 </v-form>
+                <p
+                  v-if="insideCol.caption"
+                  class="text-center caption ma-0 pa-2"
+                  v-text="insideCol.caption"
+                />
                 <v-form
                   v-if="insideCol.social_form"
                   class="pa-0 ma-0"
                 >
-                  <p
-                    class="text-center ma-0 pa-2"
-                    v-text="insideCol.other_options"
-                  />
                   <VButton
-                    v-for="(button, position) in insideCol.social_form"
-                    :key="position"
+                    v-for="button in insideCol.social_form"
+                    :key="button.name"
                     :type="button.type"
                     :block=true
                     :buttonText="button.text + `\t` + `${button.name}`"
@@ -110,21 +124,34 @@
 </template>
 
 <script>
+import Checkbox from '@/components/Form/Checkbox.vue'
 import TextField from '@/components/Form/TextField.vue'
 import VButton from '@/components/VButton.vue'
+import VTabs from '@/components/VTabs.vue'
 
 export default {
   name: 'WindowItem',
 
-  props: ['value', 'outsideCols'],
+  props: ['value', 'user', 'outsideCols'],
 
   data: () => ({
     valid: true,
     disabled: false
   }),
 
+  methods: {
+    setActions () {
+      this.$emit('stepForward')
+      this.$emit('stepBackward')
+      this.$emit('resendVerificationEmail')
+    },
+    socialRegister () {
+      console.log('Here we will register using social account')
+    }
+  },
+
   components: {
-    TextField, VButton
+    Checkbox, TextField, VButton, VTabs
   }
 }
 </script>
