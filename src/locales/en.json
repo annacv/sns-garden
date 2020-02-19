@@ -21,13 +21,33 @@
     }
   },
 
+  "other_options": "OR",
+
   "register": {
     "title": "Sign Up",
     "subtitle": "Create your free account now. No credit card required.",
     "have_account": "Already have an account?",
     "link_to": "Sign In",
     "link_to_url": "/login",
-    "sign_up_for": "for email:"
+    "sign_up_for": "for email:",
+    "terms_of_use": {
+      "title": "Terms of use",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas sed enim ut sem. Mi tempus imperdiet nulla malesuada pellentesque elit eget. Neque aliquam vestibulum morbi blandit. Quisque non tellus orci ac. Quis blandit turpis cursus in. Pulvinar pellentesque habitant morbi tristique senectus. Eros donec ac odio tempor orci. Nulla pharetra diam sit amet. Purus non enim praesent elementum facilisis leo. Netus et malesuada fames ac turpis. Magna fringilla urna porttitor rhoncus dolor purus non. Mattis enim ut tellus elementum. Mauris sit amet massa vitae. Consectetur adipiscing elit pellentesque habitant morbi tristique. Fringilla est ullamcorper eget nulla. Elit sed vulputate mi sit amet mauris. Sollicitudin tempor id eu nisl nunc mi. Massa sed elementum tempus egestas. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Sem nulla pharetra diam sit amet nisl. Turpis egestas integer eget aliquet nibh. Id porta nibh venenatis cras sed. Nisi porta lorem mollis aliquam ut porttitor leo a. Viverra orci sagittis eu volutpat odio facilisis mauris. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Lorem donec massa sapien faucibus et molestie. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac. Eget sit amet tellus cras adipiscing enim eu turpis. Libero id faucibus nisl tincidunt eget nullam non nisi. Est pellentesque elit ullamcorper dignissim cras. In hendrerit gravida rutrum quisque non tellus orci ac. Sit amet nisl purus in mollis nunc. Convallis aenean et tortor at. Lectus quam id leo in vitae turpis massa sed elementum. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Eleifend mi in nulla posuere sollicitudin. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. A diam sollicitudin tempor id eu nisl nunc. Faucibus ornare suspendisse sed nisi. Egestas integer eget aliquet nibh. Facilisis gravida neque convallis a cras semper. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Tortor dignissim convallis aenean et. Et odio pellentesque diam volutpat commodo sed. Quis lectus nulla at volutpat diam ut venenatis tellus. Nisi lacus sed viverra tellus in hac habitasse. Adipiscing diam donec adipiscing tristique risus nec. Mollis nunc sed id semper risus in hendrerit. Volutpat commodo sed egestas egestas fringilla. Turpis egestas integer eget aliquet nibh praesent tristique magna. Habitasse platea dictumst quisque sagittis. Adipiscing commodo elit at imperdiet dui accumsan sit amet nulla. Vitae turpis massa sed elementum. Sapien pellentesque habitant morbi tristique senectus. Posuere ac ut consequat semper viverra. A arcu cursus vitae congue mauris rhoncus aenean. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Proin libero nunc consequat interdum varius. Augue mauris augue neque gravida. Tincidunt dui ut ornare lectus. Tellus in hac habitasse platea dictumst vestibulum rhoncus est. Vel quam elementum pulvinar etiam non quam. Vitae purus faucibus ornare suspendisse sed nisi lacus sed. Lacus vel facilisis volutpat est velit. Velit euismod in pellentesque massa placerat duis ultricies lacus. Turpis massa tincidunt dui ut. Tortor at risus viverra adipiscing at in tellus.",
+      "checkbox": "I have read and accept Terms of Use"
+    },
+    "privacy_policy": {
+      "title": "Privacy Policy",
+      "text": "Bibendum est ultricies integer quis auctor. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Magna eget est lorem ipsum dolor sit amet. Mi sit amet mauris commodo quis imperdiet massa tincidunt. Scelerisque in dictum non consectetur a erat nam at. Nunc pulvinar sapien et ligula ullamcorper. Molestie nunc non blandit massa. Consectetur a erat nam at lectus urna duis convallis convallis. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Ante in nibh mauris cursus mattis molestie. Tellus cras adipiscing enim eu turpis egestas. Nibh mauris cursus mattis molestie a iaculis. Imperdiet nulla malesuada pellentesque elit eget gravida. Dui vivamus arcu felis bibendum ut tristique. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Viverra maecenas accumsan lacus vel. Bibendum est ultricies integer quis auctor elit sed vulputate mi. Quisque egestas diam in arcu cursus euismod quis viverra. Sapien et ligula ullamcorper malesuada proin libero nunc. Faucibus vitae aliquet nec ullamcorper sit. Eros in cursus turpis massa tincidunt dui ut ornare. Rhoncus dolor purus non enim praesent elementum facilisis leo. Diam maecenas ultricies mi eget mauris.Vitae congue eu consequat ac felis donec et odio pellentesque. Pharetra diam sit amet nisl suscipit adipiscing bibendum. Neque egestas congue quisque egestas diam. Aliquet risus feugiat in ante metus dictum at. Nec sagittis aliquam malesuada bibendum arcu vitae. Amet venenatis urna cursus eget. Vulputate odio ut enim blandit volutpat. Cras ornare arcu dui vivamus arcu felis. At in tellus integer feugiat scelerisque. Sagittis purus sit amet volutpat consequat. Felis imperdiet proin fermentum leo vel orci porta. Tellus integer feugiat scelerisque varius morbi enim nunc. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Orci phasellus egestas tellus rutrum tellus pellentesque.Amet nisl suscipit adipiscing bibendum est. Purus viverra accumsan in nisl nisi scelerisque. Vitae elementum curabitur vitae nunc sed. Nisi scelerisque eu ultrices vitae. Amet est placerat in egestas erat imperdiet sed euismod nisi. Ut eu sem integer vitae justo eget magna fermentum. Amet luctus venenatis lectus magna fringilla urna porttitor. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Auctor urna nunc id cursus metus aliquam eleifend. Nam libero justo laoreet sit amet cursus sit amet dictum. Lobortis elementum nibh tellus molestie. Turpis massa sed elementum tempus egestas sed sed. Purus semper eget duis at. Enim diam vulputate ut pharetra sit amet aliquam. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Morbi tincidunt ornare massa eget egestas purus viverra accumsan. Diam volutpat commodo sed egestas egestas fringilla phasellus. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Pellentesque id nibh tortor id aliquet lectus proin. Sit amet nisl suscipit adipiscing bibendum. Arcu cursus euismod quis viverra. Nec nam aliquam sem et tortor consequat. Eu lobortis elementum nibh tellus. Ullamcorper sit amet risus nullam eget. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. Lectus arcu bibendum at varius vel. In egestas erat imperdiet sed euismod nisi. Sit amet nisl suscipit adipiscing bibendum. Sociis natoque penatibus et magnis dis parturient montes. Odio morbi quis commodo odio aenean sed adipiscing diam donec. Pretium nibh ipsum consequat nisl vel pretium lectus. Nulla facilisi nullam vehicula ipsum a arcu cursus. Leo urna molestie at elementum eu facilisis sed odio. Dictum non consectetur a erat nam. A scelerisque purus semper eget duis at tellus at urna. Nunc lobortis mattis aliquam faucibus purus in. Dolor sed viverra ipsum nunc aliquet. Quam elementum pulvinar etiam non quam lacus suspendisse. Sit amet porttitor eget dolor morbi. Erat imperdiet sed euismod nisi porta lorem mollis aliquam. Velit laoreet id donec ultrices tincidunt arcu. Aliquet sagittis id consectetur purus. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Dignissim suspendisse in est ante. Magna eget est lorem ipsum dolor sit. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Ut venenatis tellus in metus vulputate eu.",
+      "checkbox": "I have read and accept Privacy Policy"
+    },
+    "newsletter": {
+      "checkbox": "Sign Up to our Newsletter"
+    },
+    "completed": {
+      "title": "This is your first step towards the digital distribution!",
+      "text": "The verification email has been sent to",
+      "caption": "Please check spam blsbdlbljblbljb ... in case ......." 
+    }
   },
 
   "user_actions": {
@@ -38,6 +58,11 @@
     "login": "Log in",
     "login_with": "Log In with",
     "verify_email": "Resend Verification Email"
+  },
+
+  "wizard_steps": {
+    "step": "Step",
+    "step_of": "out of"
   },
 
   "hello": "helloooo"
