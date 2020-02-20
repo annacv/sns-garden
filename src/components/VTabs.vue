@@ -15,8 +15,8 @@
     <v-card class="pt-6 pb-6">
       <v-tabs-items v-model="tab">
         <v-tab-item
-          v-for="item in tabs"
-          :key="item"
+          v-for="(item, position) in content"
+          :key="position"
         >
           <v-card
             flat
@@ -24,20 +24,13 @@
             id="scroll-target"
             style="max-height: 400px; overflow-y: auto;"
           >
-            <div v-if="item === tabs[0]">
-              <p
-                v-scroll:#scroll-target="onScroll"
-                v-text="item1"
-                style="height: auto"
-              />
-            </div>
-            <div v-else-if="item === tabs[1]">
-              <p
-                v-scroll:#scroll-target="onScroll"
-                v-text="item2"
-                style="height: auto"
-              />
-            </div>
+            <p
+              v-scroll:#scroll-target="onScroll"
+              class="text-left pr-10"
+              style="height: auto"
+            >
+              {{ item }}
+            </p>
           </v-card>
         </v-tab-item>
       </v-tabs-items>
@@ -46,8 +39,6 @@
 </template>
 
 <script>
-import i18n from '@/plugins/i18n'
-
 export default {
   name: 'Tabs',
 
@@ -60,16 +51,20 @@ export default {
       type: String,
       default: '#1300a3'
       // the default color setted is the one defined in zeroheight as accent color
+    },
+    tabs: {
+      type: Array,
+      default: () => []
+    },
+    content: {
+      type: Array,
+      default: () => []
     }
   },
 
   data: () => ({
     tab: null,
-    offsetTop: 0,
-
-    tabs: [i18n.t('register.terms_of_use.title'), i18n.t('register.privacy_policy.title')],
-    item1: i18n.t('register.terms_of_use.text'),
-    item2: i18n.t('register.privacy_policy.text')
+    offsetTop: 0
   }),
 
   methods: {
@@ -79,3 +74,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .v-tab {
+    text-transform: none;
+  }
+</style>

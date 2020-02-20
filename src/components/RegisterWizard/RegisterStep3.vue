@@ -35,20 +35,21 @@ export default {
           class: 'pt-0 ma-auto',
           stepCount: i18n.t('wizard_steps.step') + '\t' + (this.value - 1) + '\t' + i18n.t('wizard_steps.step_of') + '\t' + (this.value - 1),
           title: i18n.t('register.title'),
-          text: i18n.t('register.sign_up_for') + '\t',
+          text: i18n.t('register.sign_up_for'),
           user: true,
           userStyle: 'text-center ml-1'
         },
         col3: {
           md: '4',
           lg: '4',
-          class: 'hidden-sm-and-down'
+          class: 'hidden-sm-and-down',
+          form: false
         }
       },
       {
         hasRow: true,
         sm: '12',
-        class: 'pt-6',
+        class: 'pt-4',
         col1: {
           md: '2',
           lg: '3',
@@ -58,7 +59,9 @@ export default {
           md: '8',
           lg: '6',
           class: 'pt-0 ma-auto',
-          hasTabs: true
+          hasTabs: true,
+          tabs: [i18n.t('register.terms_of_use.title'), i18n.t('register.privacy_policy.title')],
+          content: [i18n.t('register.terms_of_use.text'), i18n.t('register.privacy_policy.text')]
         },
         col3: {
           md: '2',

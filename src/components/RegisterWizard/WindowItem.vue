@@ -71,7 +71,11 @@
                     :rules="rules"
                     :label="$t('form.input.repeat_password')"
                   />
-                  <VTabs v-if="insideCol.hasTabs === true"/>
+                  <VTabs
+                    v-if="insideCol.hasTabs === true"
+                    :tabs="insideCol.tabs"
+                    :content="insideCol.content"
+                  />
                   <Checkbox
                     v-for="(item, position) in insideCol.form_checkbox"
                     :key="position"
