@@ -42,7 +42,9 @@
                     v-text="insideCol.subtitle"
                   />
                 </div>
-                <p class="text-center">
+                <p
+                  v-if="insideCol.text"
+                  class="text-center">
                   {{ insideCol.text }}
                   <router-link
                     v-if="insideCol.link_to_url"
@@ -56,6 +58,7 @@
                   </span>
                 </p>
                 <v-form
+                  v-if="insideCol.form_field || insideCol.tabs || insideCol.form_checkbox || insideCol.stepButtons"
                   v-model="valid"
                   class="pa-0 ma-0"
                 >
