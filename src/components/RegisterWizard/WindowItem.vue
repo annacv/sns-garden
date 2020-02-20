@@ -64,6 +64,13 @@
                     :element="item"
                     :key="position"
                   />
+                  <v-text-field
+                    v-if="insideCol.pwdMatch === true"
+                    type="password"
+                    id="confirm"
+                    :rules="rules"
+                    :label="$t('form.input.repeat_password')"
+                  />
                   <VTabs v-if="insideCol.hasTabs === true"/>
                   <Checkbox
                     v-for="(item, position) in insideCol.form_checkbox"
@@ -132,7 +139,7 @@ import VTabs from '@/components/VTabs.vue'
 export default {
   name: 'WindowItem',
 
-  props: ['value', 'user', 'outsideCols'],
+  props: ['value', 'user', 'rules', 'outsideCols'],
 
   data: () => ({
     valid: true,

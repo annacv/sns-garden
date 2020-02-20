@@ -4,6 +4,7 @@
       :value="value"
       :user="this.$store.state.userData.email"
       :outsideCols="outsideCols"
+      :rules="passwordMatch"
       @stepForward="stepForward"
     />
   </div>
@@ -37,7 +38,7 @@ export default {
           class: 'pt-0 ma-auto',
           stepCount: i18n.t('wizard_steps.step') + '\t' + (this.value - 1) + '\t' + i18n.t('wizard_steps.step_of') + '\t' + this.value,
           title: i18n.t('register.title'),
-          text: i18n.t('register.sign_up_for') + '\t',
+          text: i18n.t('register.sign_up_for'),
           user: true,
           userStyle: 'text-center ml-1',
           form_field: [
@@ -61,15 +62,34 @@ export default {
               label: i18n.t('form.input.password'),
               type: 'password',
               rules: passwordRules
-            },
-            {
-              value: '',
-              id: 'confirm',
-              label: i18n.t('form.input.repeat_password'),
-              type: 'password',
-              rules: [passwordMatchRules]
             }
+            // {
+            //   value: '',
+            //   id: 'confirm',
+            //   label: i18n.t('form.input.repeat_password'),
+            //   type: 'password',
+            //   rules: [passwordMatchRules]
+            // },
+            // {
+            //   value: '',
+            //   id: 'confirm',
+            //   label: i18n.t('form.input.repeat_password'),
+            //   type: 'password',
+            //   rules: this.passwordMatch
+            // }
+            // {
+            //   value: '',
+            //   id: 'confirm',
+            //   label: i18n.t('form.input.repeat_password'),
+            //   type: 'password',
+            //   rules: [
+            //     v => !!v || i18n.t('form.validations.errors.confirm_password'),
+            //     v => v === this.outsideCols[0].col2.form_field[2].value || i18n.t('form.validations.errors.password_not_match')
+            //   ]
+            // }
           ],
+          pwdMatch: true,
+          // pwdMatchRules: this.passwordMatch,
           stepButtons: [
             {
               type: 'button',
@@ -103,7 +123,12 @@ export default {
   }),
 
   computed: {
-    ...mapState(['userData'])
+    ...mapState(['userData']),
+    passwordMatch () {
+      let rules = []
+      rules = passwordMatchRules(this.outsideCols[0].col2.form_field[2].value)
+      return rules
+    }
   },
 
   methods: {
@@ -128,12 +153,12 @@ export default {
     },
     stepBackward () {
       this.$emit('stepBackward')
-    },
-    passwordMatch () {
-      let rules = []
-      rules = passwordMatchRules(this.outsideCols[0].col2.form_field[2].value)
-      return rules
     }
+    // passwordMatch () {
+    //   let rules = []
+    //   rules = passwordMatchRules(this.outsideCols[0].col2.form_field[2].value)
+    //   return rules
+    // }
   },
 
   components: {
