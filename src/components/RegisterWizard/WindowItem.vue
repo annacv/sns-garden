@@ -16,6 +16,7 @@
                 cols="12"
                 :md="insideCol.md"
                 :lg="insideCol.lg"
+                :xl="insideCol.xl"
                 :class="insideCol.class"
               >
                 <v-icon
@@ -157,7 +158,6 @@ export default {
     setActions () {
       this.$emit('stepForward')
       this.$emit('stepBackward')
-      this.$emit('resendVerificationEmail')
     },
     socialRegister () {
       console.log('Here we will register using social account')

@@ -27,11 +27,13 @@ export default {
         col1: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down'
         },
         col2: {
           md: '3',
           lg: '3',
+          xl: '2',
           class: 'pt-0 ma-auto',
           stepCount: i18n.t('wizard_steps.step') + '\t' + (this.value - 1) + '\t' + i18n.t('wizard_steps.step_of') + '\t' + (this.value - 1),
           title: i18n.t('register.title'),
@@ -42,6 +44,7 @@ export default {
         col3: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down',
           form: false
         }
@@ -53,11 +56,13 @@ export default {
         col1: {
           md: '2',
           lg: '3',
+          xl: '4',
           class: 'hidden-sm-and-down'
         },
         col2: {
           md: '8',
           lg: '6',
+          xl: '4',
           class: 'pt-0 ma-auto',
           hasTabs: true,
           tabs: [i18n.t('register.terms_of_use.title'), i18n.t('register.privacy_policy.title')],
@@ -66,6 +71,7 @@ export default {
         col3: {
           md: '2',
           lg: '3',
+          xl: '4',
           class: 'hidden-sm-and-down'
         }
       },
@@ -76,11 +82,13 @@ export default {
         col1: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down'
         },
         col2: {
           md: '3',
           lg: '3',
+          xl: '2',
           class: 'pt-0 ma-auto',
           form_checkbox: [
             {
@@ -106,6 +114,7 @@ export default {
         col3: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down'
         }
       },
@@ -116,17 +125,20 @@ export default {
         col1: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down'
         },
         col2: {
           md: '3',
           lg: '3',
+          xl: '2',
           class: 'pt-0 ma-auto',
           text: 'Rechapta will go here'
         },
         col3: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down'
         }
       },
@@ -137,11 +149,13 @@ export default {
         col1: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down'
         },
         col2: {
           md: '3',
           lg: '3',
+          xl: '2',
           class: 'pt-0 ma-auto',
           stepButtons: [
             {
@@ -160,6 +174,7 @@ export default {
         col3: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down'
         }
       }

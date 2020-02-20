@@ -26,11 +26,13 @@ export default {
         col1: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down'
         },
         col2: {
           md: '3',
           lg: '3',
+          xl: '2',
           class: 'pt-0 ma-auto',
           icon: 'mdi-rocket',
           title: i18n.t('register.completed.title'),
@@ -57,6 +59,7 @@ export default {
         col3: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down'
         }
       }
@@ -73,7 +76,7 @@ export default {
   },
 
   methods: {
-    sendVerificationEmail (e) {
+    stepForward (e) {
       console.log('resend verification email')
     },
     stepBackward () {

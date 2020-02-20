@@ -30,11 +30,13 @@ export default {
         col1: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down'
         },
         col2: {
           md: '3',
           lg: '3',
+          xl: '2',
           class: 'pt-0 ma-auto',
           stepCount: i18n.t('wizard_steps.step') + '\t' + (this.value - 1) + '\t' + i18n.t('wizard_steps.step_of') + '\t' + this.value,
           title: i18n.t('register.title'),
@@ -107,6 +109,7 @@ export default {
         col3: {
           md: '4',
           lg: '4',
+          xl: '5',
           class: 'hidden-sm-and-down'
         }
       }

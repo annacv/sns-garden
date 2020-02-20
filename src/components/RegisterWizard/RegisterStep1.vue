@@ -24,11 +24,13 @@ export default {
         col1: {
           md: '2',
           lg: '3',
+          xl: '4',
           class: 'hidden-sm-and-down'
         },
         col2: {
           md: '8',
           lg: '6',
+          xl: '4',
           class: 'pt-0',
           title: i18n.t('register.title'),
           subtitle: i18n.t('register.subtitle'),
@@ -91,6 +93,7 @@ export default {
         col3: {
           md: '2',
           lg: '3',
+          xl: '4',
           class: 'hidden-sm-and-down'
         }
       },
