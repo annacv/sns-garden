@@ -32,7 +32,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'VButton',
 
@@ -105,3 +104,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .v-btn {
+    text-transform: none;
+  }
+</style>
