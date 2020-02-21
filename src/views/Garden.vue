@@ -2,15 +2,22 @@
   <div class="garden">
     <h1 class="garden__title">This is a playground page</h1>
     <v-window v-model="initStep">
-      <register-step-1 @stepForward="stepForward"/>
+      <component
+        :is="wizardStep"
+        :value="value"
+        @stepForward="stepForward"
+        @stepBackward="stepBackward"
+      />
+      <!-- <register-step-1 @stepForward="stepForward"/>
       <register-step-2 @stepForward="stepForward"/>
       <register-step-3 @stepForward="stepForward"/>
-      <register-step-4/>
+      <register-step-4 @stepForward="stepForward"/> -->
     </v-window>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import LayoutDefault from '@/layouts/LayoutDefault.vue'
 import RegisterStep1 from '@/components/RegisterWizard/RegisterStep1.vue'
 import RegisterStep2 from '@/components/RegisterWizard/RegisterStep2.vue'
@@ -34,6 +41,16 @@ export default {
     },
     stepBackward () {
       this.$store.commit('setStep', --this.initStep)
+    }
+  },
+
+  computed: {
+    ...mapGetters(['getStep']),
+    value () {
+      return this.getStep
+    },
+    wizardStep () {
+      return `register-step-${this.getStep}`
     }
   },
 
