@@ -2,16 +2,17 @@
   <div>
     <window-item
       :value="value"
-      :user="this.$store.state.userData.email"
+      :user="this.$store.getters.getUser.email"
       :outsideCols="outsideCols"
       @stepForward="stepForward"
+      @stepBackward="stepBackward"
     />
   </div>
 </template>
 
 <script>
 import i18n from '@/plugins/i18n'
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 import WindowItem from '@/components/RegisterWizard/WindowItem.vue'
 
 export default {
@@ -160,12 +161,14 @@ export default {
           stepButtons: [
             {
               type: 'button',
+              key: 'stepBackward',
               text: i18n.t('user_actions.previous_step'),
               disabled: false,
               color: 'secondary'
             },
             {
               type: 'submit',
+              key: 'stepForward',
               text: i18n.t('user_actions.next_step'),
               color: 'primary'
             }
@@ -187,7 +190,7 @@ export default {
   }),
 
   computed: {
-    ...mapState(['userData'])
+    ...mapGetters(['getUser'])
   },
 
   methods: {

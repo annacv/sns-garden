@@ -68,13 +68,6 @@
                     :element="item"
                     :key="position"
                   />
-                  <v-text-field
-                    v-if="insideCol.pwdMatch === true"
-                    type="password"
-                    id="confirm"
-                    :rules="rules"
-                    :label="$t('form.input.repeat_password')"
-                  />
                   <VTabs
                     v-if="insideCol.hasTabs === true"
                     :tabs="insideCol.tabs"
@@ -87,7 +80,7 @@
                   />
                   <VButton
                     v-for="button in insideCol.stepButtons"
-                    :key="button.text"
+                    :key="button.key"
                     className="mt-3 mb-3"
                     :type="button.type"
                     :block=true
@@ -95,7 +88,7 @@
                     :buttonText="button.text"
                     :color="button.color"
                     :outlined="button.outlined"
-                    @click="setActions"
+                    @click="setActions(button.key)"
                   />
                 </v-form>
                 <p
@@ -155,9 +148,8 @@ export default {
   }),
 
   methods: {
-    setActions () {
-      this.$emit('stepForward')
-      this.$emit('stepBackward')
+    setActions (param) {
+      this.$emit(param)
     },
     socialRegister () {
       console.log('Here we will register using social account')

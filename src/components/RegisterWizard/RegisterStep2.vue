@@ -2,17 +2,18 @@
   <div>
     <window-item
       :value="value"
-      :user="this.$store.state.userData.email"
+      :user="this.$store.getters.getUser.email"
       :outsideCols="outsideCols"
       :rules="passwordMatch"
       @stepForward="stepForward"
+      @stepBackward="stepBackward"
     />
   </div>
 </template>
 
 <script>
 import i18n from '@/plugins/i18n'
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 import bcrypt from 'bcryptjs'
 import { stringRules, passwordRules, passwordMatchRules } from '@/config/form-validations.js'
 import WindowItem from '@/components/RegisterWizard/WindowItem.vue'
@@ -21,7 +22,6 @@ export default {
   name: 'RegisterStep2',
 
   created () {
-    this.value = 2
     this.outsideCols = [
       {
         hasRow: true,
@@ -64,43 +64,29 @@ export default {
               label: i18n.t('form.input.password'),
               type: 'password',
               rules: passwordRules
+            },
+            {
+              value: '',
+              id: 'confirm',
+              label: i18n.t('form.input.repeat_password'),
+              type: 'password',
+              rules: [
+                v => !!v || i18n.t('form.validations.errors.confirm_password'),
+                v => v === this.outsideCols[0].col2.form_field[2].value || i18n.t('form.validations.errors.password_not_match')
+              ]
             }
-            // {
-            //   value: '',
-            //   id: 'confirm',
-            //   label: i18n.t('form.input.repeat_password'),
-            //   type: 'password',
-            //   rules: [passwordMatchRules]
-            // },
-            // {
-            //   value: '',
-            //   id: 'confirm',
-            //   label: i18n.t('form.input.repeat_password'),
-            //   type: 'password',
-            //   rules: this.passwordMatch
-            // }
-            // {
-            //   value: '',
-            //   id: 'confirm',
-            //   label: i18n.t('form.input.repeat_password'),
-            //   type: 'password',
-            //   rules: [
-            //     v => !!v || i18n.t('form.validations.errors.confirm_password'),
-            //     v => v === this.outsideCols[0].col2.form_field[2].value || i18n.t('form.validations.errors.password_not_match')
-            //   ]
-            // }
           ],
-          pwdMatch: true,
-          // pwdMatchRules: this.passwordMatch,
           stepButtons: [
             {
               type: 'button',
+              key: 'stepBackward',
               text: i18n.t('user_actions.previous_step'),
               disabled: false,
               color: 'secondary'
             },
             {
               type: 'submit',
+              key: 'stepForward',
               text: i18n.t('user_actions.next_step'),
               color: 'primary'
             }
@@ -117,7 +103,7 @@ export default {
   },
 
   data: () => ({
-    value: '',
+    value: 2,
     outsideCols: [],
     user: {
       password: '',
@@ -126,7 +112,7 @@ export default {
   }),
 
   computed: {
-    ...mapState(['userData']),
+    ...mapGetters(['getUser']),
     passwordMatch () {
       let rules = []
       rules = passwordMatchRules(this.outsideCols[0].col2.form_field[2].value)
@@ -157,11 +143,6 @@ export default {
     stepBackward () {
       this.$emit('stepBackward')
     }
-    // passwordMatch () {
-    //   let rules = []
-    //   rules = passwordMatchRules(this.outsideCols[0].col2.form_field[2].value)
-    //   return rules
-    // }
   },
 
   components: {

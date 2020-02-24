@@ -49,6 +49,7 @@ export default {
           stepButtons: [
             {
               type: 'submit',
+              key: 'stepForward',
               text: i18n.t('user_actions.next_step'),
               color: 'primary',
               isPrimary: true
@@ -112,8 +113,7 @@ export default {
     stepForward () {
       const email = this.outsideCols[0].col2.form_field[0].value
       this.$store.commit('setUserData', { email: email })
-      console.log(email)
-      this.$emit('stepForward')
+      this.$emit('stepForward', 'stepForward')
     }
   },
 
