@@ -2,16 +2,14 @@
   <div class="garden">
     <h1 class="garden__title">This is a playground page</h1>
     <v-window v-model="initStep">
-      <component
-        :is="wizardStep"
-        :value="value"
-        @stepForward="stepForward"
-        @stepBackward="stepBackward"
-      />
-      <!-- <register-step-1 @stepForward="stepForward"/>
-      <register-step-2 @stepForward="stepForward"/>
-      <register-step-3 @stepForward="stepForward"/>
-      <register-step-4 @stepForward="stepForward"/> -->
+      <transition name="fade">
+        <component
+          :is="wizardStep"
+          :value="value"
+          @stepForward="stepForward"
+          @stepBackward="stepBackward"
+        />
+      </transition>
     </v-window>
   </div>
 </template>
@@ -28,6 +26,7 @@ export default {
   name: 'Garden',
 
   created () {
+    this.initStep = this.value
     this.$emit('update:layout', LayoutDefault)
   },
 
@@ -62,3 +61,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+   .fade-enter-active{
+        transition: opacity 1.5s;
+    }
+    .fade-leave-active {
+        opacity: 0;
+    }
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
+    }
+</style>
