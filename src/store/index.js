@@ -32,7 +32,6 @@ export default new Vuex.Store({
   * @param userData
   */
     setUserData (state, userData) {
-      console.log(userData)
       const values = Object.keys(userData)
       values.forEach((key, n) => {
         state.userData[values[n]] = userData[key]
